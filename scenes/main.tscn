@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://clq7nox1juh3a"]
 
 [ext_resource type="Environment" uid="uid://c3bs0wfxpri8g" path="res://scenes/main-environment.tres" id="1_q4t1r"]
-[ext_resource type="Script" uid="uid://b24bstassw26s" path="res://scripts/view.gd" id="5_0lrhn"]
+[ext_resource type="Script" uid="uid://biuruf6vj5j5q" path="res://scenes/Main.cs" id="1_tipki"]
+[ext_resource type="Script" uid="uid://hou2yljvw684" path="res://scripts/View.cs" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://badoy1c127yhf" path="res://scenes/vehicle.tscn" id="7_o6xl0"]
 [ext_resource type="MeshLibrary" uid="uid://b6myd2b7l2o2j" path="res://models/Library/mesh-library.tres" id="8_eg7gk"]
 [ext_resource type="PackedScene" uid="uid://c44tfiddyjjm1" path="res://models/vehicle-truck-green.glb" id="9_cmq2j"]
@@ -16,6 +17,7 @@ friction = 0.0
 bounce = 0.1
 
 [node name="Main" type="Node3D" unique_id=1145999287]
+script = ExtResource("1_tipki")
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=1097254880]
 environment = ExtResource("1_q4t1r")
@@ -25,10 +27,10 @@ environment = ExtResource("1_q4t1r")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane" unique_id=1840952651]
 shape = SubResource("BoxShape3D_ya4ey")
 
-[node name="View" type="Node3D" parent="." unique_id=1807530472 node_paths=PackedStringArray("target")]
+[node name="View" type="Node3D" parent="." unique_id=1807530472 node_paths=PackedStringArray("Target")]
 transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 3.5, 0, 5)
-script = ExtResource("5_0lrhn")
-target = NodePath("../Vehicle")
+script = ExtResource("3_tipki")
+Target = NodePath("../Vehicle")
 
 [node name="Camera" type="Camera3D" parent="View" unique_id=1079798936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
