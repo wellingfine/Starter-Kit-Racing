@@ -6,5 +6,8 @@
   "search.exclude": {
     "**/*.uid": true,
     "**/*.import": true
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
   }
 }

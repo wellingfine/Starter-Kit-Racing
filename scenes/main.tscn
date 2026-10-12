@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://hou2yljvw684" path="res://scripts/View.cs" id="3_tipki"]
 [ext_resource type="PackedScene" uid="uid://badoy1c127yhf" path="res://scenes/vehicle.tscn" id="7_o6xl0"]
 [ext_resource type="MeshLibrary" uid="uid://b6myd2b7l2o2j" path="res://models/Library/mesh-library.tres" id="8_eg7gk"]
-[ext_resource type="Script" uid="uid://ba7t3xik4ewi7" path="res://scripts/Vehicle.cs" id="9_85g3d"]
 [ext_resource type="PackedScene" uid="uid://c44tfiddyjjm1" path="res://models/vehicle-truck-green.glb" id="9_cmq2j"]
 [ext_resource type="PackedScene" uid="uid://cxotjqn50aokg" path="res://scenes/vehicle-motorcycle.tscn" id="10_choun"]
 [ext_resource type="PackedScene" uid="uid://c5e64mpylh1ge" path="res://models/vehicle-truck-purple.glb" id="10_p3c1o"]
@@ -73,7 +72,6 @@ transform = Transform3D(-0.913034, 0, 0.407884, 0, 1, 0, -0.407884, 0, -0.913034
 
 [node name="Vehicle" parent="." unique_id=1867641805 instance=ExtResource("7_o6xl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 5)
-script = ExtResource("9_85g3d")
 
 [node name="Vehicle2" parent="." unique_id=999681629 instance=ExtResource("10_choun")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7667336, 0, 4.985487)

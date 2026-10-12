@@ -4,7 +4,9 @@
 
 fork from https://github.com/KenneyNL/Starter-Kit-Racing.git
 
-这是一个基于 **Godot 4.6** 的赛车游戏起步模板，包含一套完整的街机风格驾驶手感和赛道搭建方案。
+这是一个基于 **Godot 4.8（.NET / C#）** 的赛车游戏起步模板，包含一套完整的街机风格驾驶手感和赛道搭建方案。
+
+> 脚本语言为 C#：车辆 `scripts/Vehicle.cs`、摩托车 `scripts/VehicleMotorcycle.cs`、相机 `scripts/View.cs`。修改脚本后需要在编辑器里执行 **项目 → 构建**。
 
 ## 包含特性
 
@@ -47,7 +49,7 @@ fork from https://github.com/KenneyNL/Starter-Kit-Racing.git
 
 ### 4. 如何从汽车换成摩托车？
 
-从主场景中移除 `Vehicle` 节点，找到 `vehicle-motorcycle.tscn` 场景并放进主场景，然后把 `View` 节点的 `target` 重新指向新的载具。
+从主场景中移除 `Vehicle` 节点，找到 `vehicle-motorcycle.tscn` 场景并放进主场景，然后把 `View` 节点的 **Target** 属性重新指向新的载具（C# 导出属性名首字母大写）。
 
 ## 文档
 
@@ -59,9 +61,9 @@ fork from https://github.com/KenneyNL/Starter-Kit-Racing.git
 | [快速开始](docs/02-快速开始.md) | 运行方式、操作说明、编辑器操作步骤 |
 | [目录结构](docs/03-目录结构.md) | 各文件夹与资源的用途 |
 | [车辆系统](docs/04-车辆系统.md) | 球体代理物理原理、特效系统、扩展方式 |
-| [脚本参考](docs/05-脚本参考.md) | 三个脚本的职责与可扩展方法 |
+| [脚本参考](docs/05-脚本参考.md) | C# 脚本清单、状态字段与可扩展方法 |
 | [赛道与场景](docs/06-赛道与场景.md) | 主场景构成、GridMap、环境与相机 |
-| [项目设置](docs/07-项目设置.md) | 输入映射、渲染、物理、启动画面 |
+| [项目设置](docs/07-项目设置.md) | 输入映射、渲染、物理、.NET、启动画面 |
 | [已知问题与改进建议](docs/08-已知问题与改进建议.md) | 现有缺陷清单与修复思路 |
 
 ## 许可

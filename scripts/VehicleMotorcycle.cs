@@ -1,9 +1,10 @@
 #nullable enable
 using Godot;
 
-// scripts/vehicle-motorcycle.gd 的 C# 版本（原 GDScript 文件保留）。
-// 继承 C# 版 Vehicle，只重写「车身姿态」和「车轮」两个表现方法，
+// 摩托车：原 GDScript 版 scripts/vehicle-motorcycle.gd 已移除，这是唯一实现。
+// 继承 Vehicle，只重写「车身姿态」和「车轮」两个表现方法，
 // 物理驱动、输入、音效全部沿用基类。
+[GlobalClass]
 public partial class VehicleMotorcycle : Vehicle
 {
 	private Node3D? _motorcycle;

@@ -1,11 +1,10 @@
 #nullable enable
 using Godot;
 
-// scripts/vehicle.gd 的 C# 版本（原 GDScript 文件保留）。
-//
-// 注意：这里刻意不加 [GlobalClass]，因为 vehicle.gd 仍保留着 `class_name Vehicle`，
-// 两个同名全局类会冲突。等原 GDScript 彻底弃用后，再加 [GlobalClass] 即可。
-// 依赖原 GDScript 的 vehicle-motorcycle.gd（extends Vehicle）不受影响，继续可用。
+// 车辆基类：球体代理物理、姿态表现、特效与音效。
+// 原 GDScript 版 scripts/vehicle.gd 已移除，这是唯一的 Vehicle 实现。
+// 摩托车（VehicleMotorcycle）继承本类，物理驱动、输入、音效全部沿用这里。
+[GlobalClass]
 public partial class Vehicle : Node3D
 {
 	// 节点
@@ -36,7 +35,7 @@ public partial class Vehicle : Node3D
 	private AudioStreamPlayer3D _engineSound = null!;
 	private AudioStreamPlayer3D _impactSound = null!;
 
-	// 状态（对应 GDScript 里的 input / normal / acceleration / ...）
+	// 车辆状态：输入、地面法线、速度与姿态等
 
 	protected Vector3 _input;
 	protected Vector3 Normal;
@@ -148,6 +147,7 @@ public partial class Vehicle : Node3D
 
 	protected virtual void HandleInput(float delta)
 	{
+
 		if (_raycast.IsColliding())
 		{
 			_input.X = Input.GetAxis("left", "right");
