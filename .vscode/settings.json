@@ -8,6 +8,6 @@
     "**/*.import": true
   },
   "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
+    "editor.defaultFormatter": "dotnetdev-kr-custom.csharp"
   }
 }

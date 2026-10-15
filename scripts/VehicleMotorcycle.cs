@@ -14,7 +14,6 @@ public partial class VehicleMotorcycle : Vehicle
 	private Node3D? _wheelBack;
 
 	// 生命周期
-
 	public override void _Ready()
 	{
 		base._Ready(); // 先让基类取好 Sphere / Container / 音效等引用
@@ -30,7 +29,6 @@ public partial class VehicleMotorcycle : Vehicle
 	}
 
 	// 压弯：整车绕 Z 轴倾斜（汽车只是车身侧倾，这是两者观感上最大的区别）
-
 	protected override void EffectBody(float delta)
 	{
 		float targetLean = -_input.X / 5 * LinearSpeed;
@@ -52,11 +50,9 @@ public partial class VehicleMotorcycle : Vehicle
 	}
 
 	// 只有前后两个轮子，且转向时前叉（fork）要跟着一起转
-
 	protected override void EffectWheels(float delta)
 	{
 		// 根据加速度转动车轮
-
 		Node3D?[] wheels = { _wheelFront, _wheelBack };
 		foreach (Node3D? wheel in wheels)
 		{
@@ -65,7 +61,6 @@ public partial class VehicleMotorcycle : Vehicle
 		}
 
 		// 处理转向
-
 		if (_wheelFront == null) return;
 
 		if (_fork != null)
